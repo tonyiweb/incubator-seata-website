@@ -34,5 +34,5 @@ Seata 的隔离级别默认为读未提交，该模式下本文表中的 select 
 | ALIASES                                    | `SELECT t1. col_name1, t2.col_name2 FROM tb1_name AS t1, tb2_name AS t2 WHERE t1. col_name=expr AND t2. col_name=expr`       | 是       | 是       |
 | TOP                                        | `SELECT TOP 2 * FROM tb1_name`                                                                                               | 是       | 是       |
 | LIMIT                                      | `SELECT col_name1, col_name2 FROM tb1_name LIMIT 5`                                                                          | 是       | 是       |
-| JOININNER JOINLEFT JOINRIGHT JOINFULL JOIN | `SELECT col_name1, col_name2 FROM tb1_name JOIN tb2_name>ON tb1_name. col_name1= tb2_name. col_name1`                        | 是       | 否       |
-| UNIONUNION ALLSELECT INTO                  | `SELECT col_name1, col_name2 FROM tb1_name UNION SELECT col_name1, col_name2 FROM tb2_name`                                  | 是       | 否       |
+| JOIN & INNER JOIN & LEFT JOIN & RIGHT JOIN & FULL JOIN | `SELECT col_name1, col_name2 FROM tb1_name JOIN tb2_name>ON tb1_name. col_name1= tb2_name. col_name1`                        | 是       | 否       |
+| UNION & UNION ALL & SELECT INTO                  | `SELECT col_name1, col_name2 FROM tb1_name UNION SELECT col_name1, col_name2 FROM tb2_name`                                  | 是       | 否       |
